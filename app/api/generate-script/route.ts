@@ -27,9 +27,12 @@ REGLAS DEL SCRIPT:
 TABLA DE PAUSAS OBLIGATORIA (basada en Jon Kabat-Zinn, Tara Brach y tecnicas 4-7-8 y box breathing):
 
 INSTRUCCIONES DE APERTURA:
-- Cierra los ojos lentamente -> [pausa 4s]
+- Cierra los ojos lentamente -> [pausa 5s]
 - Encuentra una posicion comoda -> [pausa 5s]
-- Siente el contacto de tu cuerpo con la superficie -> [pausa 6s]
+- Acomoda tu cuerpo -> [pausa 5s]
+- Siente el contacto de tu cuerpo con la superficie -> [pausa 5s]
+- Relaja tu mandibula -> [pausa 5s]
+- Suelta los hombros -> [pausa 5s]
 
 INSTRUCCIONES DE RESPIRACION:
 - Inhala profundo por la nariz -> [pausa 5s]
