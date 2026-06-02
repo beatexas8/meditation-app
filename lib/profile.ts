@@ -35,7 +35,7 @@ export function buildProfile(answers: Partial<Record<QuestionId, string>>): User
     level,
     recommendedMode,
     preferredDuration: parseInt(answers['session_duration'] ?? '10', 10),
-    preferredLanguage: (answers['language'] as UserProfile['preferredLanguage']) ?? 'es',
+    preferredLanguage: 'es',
     preferredTone: answers['tone'] ?? 'neutral',
     wantsPersonalization: answers['personalization'] === 'yes',
     completedAt: new Date().toISOString(),
