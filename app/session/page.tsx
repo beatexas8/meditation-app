@@ -49,6 +49,7 @@ export default function SessionPage() {
   const [profile, setProfile] = useState<UserProfile | null>(null)
   const [state, setState] = useState<SessionState>('loading')
   const [voice, setVoice] = useState<'male' | 'female'>('female')
+  const [presessionConfig, setPresessionConfig] = useState<any>(null)
   const [error, setError] = useState('')
   const [loadingStep, setLoadingStep] = useState(0)
   const [loadingPct, setLoadingPct] = useState(0)
@@ -59,6 +60,8 @@ export default function SessionPage() {
     const p = loadProfile()
     if (!p) { router.push('/onboarding'); return }
     setProfile(p)
+    const raw = sessionStorage.getItem("presession_config")
+    if (raw) { try { const config = JSON.parse(raw); setPresessionConfig(config); if (config.voice) setVoice(config.voice as any) } catch {} }
   }, [router])
 
   useEffect(() => {
@@ -93,7 +96,7 @@ export default function SessionPage() {
           objective: OBJECTIVE_LABELS[profile.answers.objective ?? ''] ?? 'bienestar general',
           mood: MOOD_LABELS[profile.answers.current_mood ?? ''] ?? 'neutral',
           tone: profile.preferredTone,
-          duration: profile.preferredDuration,
+          duration: presessionConfig?.duration ?? profile.preferredDuration,
           mode: profile.recommendedMode,
         }),
       })
